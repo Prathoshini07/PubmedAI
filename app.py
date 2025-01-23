@@ -6,7 +6,6 @@ from sklearn.cluster import KMeans
 import pandas as pd
 
 # Function to connect to PostgreSQL
-# Function to connect to PostgreSQL
 def connect_db():
     try:
         # Fetch DATABASE_URL from secrets.toml
@@ -17,19 +16,6 @@ def connect_db():
         st.error(f"Error connecting to database: {e}")
         return None
 
-    try:
-        connection = psycopg2.connect(
-            user="postgres",
-            password="12345",
-            host="localhost",
-            port="5432",
-            database="pubmed"
-        )
-        print("Connected to the database")
-        return connection
-    except Exception as e:
-        st.error(f"Error connecting to database: {e}")
-        return None
 
 # Function to get all article titles and PMIDs for clustering
 def get_all_articles(connection):
