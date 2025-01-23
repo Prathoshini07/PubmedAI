@@ -1,0 +1,7 @@
+streamlit
+psycopg2-binary
+requests
+beautifulsoup4
+pandas
+transformers
+scikit-learn
