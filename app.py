@@ -6,7 +6,17 @@ from sklearn.cluster import KMeans
 import pandas as pd
 
 # Function to connect to PostgreSQL
+# Function to connect to PostgreSQL
 def connect_db():
+    try:
+        # Fetch DATABASE_URL from secrets.toml
+        connection = psycopg2.connect(st.secrets["DATABASE_URL"])
+        print("Connected to the database")
+        return connection
+    except Exception as e:
+        st.error(f"Error connecting to database: {e}")
+        return None
+
     try:
         connection = psycopg2.connect(
             user="postgres",
