@@ -9,7 +9,14 @@ import pandas as pd
 def connect_db():
     try:
         # Fetch DATABASE_URL from secrets.toml
-        connection = psycopg2.connect(st.secrets["DATABASE_URL"])
+        connection = psycopg2.connect(
+            user="postgres",
+            password="12345",
+            host="localhost",  # Or "49.47.218.14" if remote
+            port="5432",
+            database="pubmed"
+        )
+
         print("Connected to the database")
         return connection
     except Exception as e:
