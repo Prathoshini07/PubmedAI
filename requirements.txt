@@ -1,6 +1,8 @@
 streamlit
 psycopg2-binary
 requests
+pymongo
+transformers
 beautifulsoup4
 pandas
 transformers
