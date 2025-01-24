@@ -12,7 +12,7 @@ def connect_db():
         connection = psycopg2.connect(
             user="postgres",
             password="12345",
-            host="49.47.218.14", #if remote
+            host="49.47.218.63",
             port="5432",
             database="pubmed"
         )
