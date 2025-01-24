@@ -6,5 +6,4 @@ transformers
 beautifulsoup4
 pandas
 scikit-learn
-tensorflow
-torch
+tensorflow==2.10.0
